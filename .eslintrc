@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["@typescript-eslint", "import"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    ],
+    "max-len": [2, 120, 2],
+    "no-console": "warn"
+  }
+}
